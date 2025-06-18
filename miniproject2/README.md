@@ -69,12 +69,19 @@ ERD
         - processes - 처리할 실시간 공정과정 저장 테이블
 
 <img src="../image/mp0003.png" width="600">
-
 ##### IoT 디바이스 시뮬레이터
 - 라즈베리파이, 아두이노 등 사용 디바이스 구성 및 구현
 - C# 시뮬레이션으로 동작을 만드는 윈앱 구현
 
-1. Visual Studio 프로젝트 생성
+1. Visual Studio, WPF MVVM 프로젝트 생성
+2. NuGet 패키지 설치
+    - CommunityToolkit.Mvvm
+    - MahApps.Metro, IconPacks
+    - MQTTNet
+    - Newtonsoft.Json
+3. View, ViewModel 구성
+4. WPF 애니메이션 기능으로 컨베이어벨트 구현
+
 
 
 ##### MQTT Subscriber
