@@ -152,7 +152,8 @@ namespace WpfMrpSimulatorApp.ViewModels
                     {
                         var basicCode = reader.GetString("basicCode");
                         var codeName = reader.GetString("codeName");
-                        var codeDesc = reader.GetString("codeDesc");
+                        var codeDesc = reader.IsDBNull(reader.GetOrdinal("codeDesc")) ? null : reader.GetString("codeDesc");
+
                         var regDt = reader.GetDateTime("regDt");
                         // modDt는 최초에 입력후 항상 null. NULL타입 체크 필수
                         var modDt = reader.IsDBNull(reader.GetOrdinal("modDt")) ? (DateTime?)null : reader.GetDateTime("modDt");
