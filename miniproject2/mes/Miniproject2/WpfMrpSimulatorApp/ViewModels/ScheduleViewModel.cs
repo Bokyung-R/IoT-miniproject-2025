@@ -2,20 +2,13 @@
 using CommunityToolkit.Mvvm.Input;
 using MahApps.Metro.Controls.Dialogs;
 using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using WpfMrpSimulatorApp.Helpers;
 using WpfMrpSimulatorApp.Models;
 
 namespace WpfMrpSimulatorApp.ViewModels
 {
-    public partial class SettingViewModel : ObservableObject
+    public partial class ScheduleViewModel : ObservableObject
     {
 
         // readonly 생성자에서 할당하고나면 그 이후에 값변경 불가
@@ -125,7 +118,7 @@ namespace WpfMrpSimulatorApp.ViewModels
 
 
         #endregion
-        public SettingViewModel(IDialogCoordinator coordinator)
+        public ScheduleViewModel(IDialogCoordinator coordinator)
         {
             this.dialogCoordinator = coordinator;   // 파라미터값으로 초기화
             LoadGridFromDb();
@@ -189,9 +182,6 @@ namespace WpfMrpSimulatorApp.ViewModels
 
             // IsUpdate가 False면 신규, True면 수정
             IsUpdate = false;
-
-            CanSave = true;
-            CanRemove = false;  // 이게 없으면 수정 후 신규를 눌러도 활성화 되어있음
         }
 
         #region View 버튼 클릭 메서드

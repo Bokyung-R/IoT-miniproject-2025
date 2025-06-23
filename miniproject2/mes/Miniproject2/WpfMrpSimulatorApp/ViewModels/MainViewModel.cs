@@ -58,7 +58,7 @@ namespace WpfMrpSimulatorApp.ViewModels
         [RelayCommand]
         public void AppSetting()
         {
-            var viewModel = new SettingViewModel();
+            var viewModel = new SettingViewModel(Common.DIALOGCOORDINATOR);
             var view = new SettingView
             {
                 DataContext = viewModel,
@@ -66,6 +66,19 @@ namespace WpfMrpSimulatorApp.ViewModels
 
             CurrentView = view;
         }
+
+        [RelayCommand]
+        public void SetSchedule()
+        {
+            var viewModel = new ScheduleViewModel(Common.DIALOGCOORDINATOR);
+            var view = new ScheduleView
+            {
+                DataContext = viewModel,
+            };
+
+            CurrentView = view;
+        }
+
 
     }
 }
