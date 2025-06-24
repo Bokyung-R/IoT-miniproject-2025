@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using WpfMrpSimulatorApp.Helpers;
+using WpfMrpSimulatorApp.Models;
 using WpfMrpSimulatorApp.Views;
 
 namespace WpfMrpSimulatorApp.ViewModels
@@ -18,6 +19,7 @@ namespace WpfMrpSimulatorApp.ViewModels
 
         // 다이얼로그 코디네이터 변수 선언
         private readonly IDialogCoordinator dialogCoordinator;
+        private readonly IoTDbContext dbContext;
 
         private string _greeting;
         private UserControl _currentView;
