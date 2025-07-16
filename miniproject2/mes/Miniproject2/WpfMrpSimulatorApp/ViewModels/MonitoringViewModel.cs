@@ -124,7 +124,7 @@ namespace WpfMrpSimulatorApp.ViewModels
             SchIdx = 1; // 최초 1부터 시작
 
             // MQTT 초기화
-            brokerHost = "210.119.12.74";   // 본인 아이피
+            brokerHost = "192.168.0.2";   // 본인 아이피
             clientId = "MON01";
             mqttSubTopic = "pknu/sf74/data";
             mqttPubTopic = "pknu/sf74/control";

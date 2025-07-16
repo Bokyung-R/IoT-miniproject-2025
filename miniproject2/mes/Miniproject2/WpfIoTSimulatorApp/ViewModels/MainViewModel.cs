@@ -51,7 +51,7 @@ namespace WpfIoTSimulatorApp.ViewModels
             LogText = "프로그램 실행";
 
             // MQTT용 초기화
-            brokerHost = "210.119.12.74"; // 본인 PC 아이피
+            brokerHost = "192.168.0.2"; // 본인 PC 아이피
             clientId = "IOT01";  // IoT장비번호
             mqttPubTopic = "pknu/sf74/data"; // 스마트팩토리 토픽
             mqttSubTopic = "pknu/sf74/control"; // 모니터링에서 넘어오는 토픽
