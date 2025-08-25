@@ -146,7 +146,9 @@ namespace WpfMrpSimulatorApp.ViewModels
                     {
                         var basicCode = reader.GetString("basicCode");
                         var codeName = reader.GetString("codeName");
-                        var codeDesc = reader.GetString("codeDesc");
+                        //var codeDesc = reader.GetString("codeDesc");
+                        var codeDesc = reader.IsDBNull(reader.GetOrdinal("codeDesc"))? null: reader.GetString("codeDesc");
+
                         var regDt = reader.GetDateTime("regDt");
                         // modDt는 최초에 입력후 항상 null. NULL타입 체크 필수
                         var modDt = reader.IsDBNull(reader.GetOrdinal("modDt")) ? (DateTime?)null : reader.GetDateTime("modDt");
@@ -177,7 +179,7 @@ namespace WpfMrpSimulatorApp.ViewModels
             IsUpdate = false;
 
             CanSave = true;
-            CanRemove = false;  // 이게 없으면 수정후 신규를 눌러도 활성화 되어 있음. 250623 12:31 hugo 수정
+            CanRemove = false;  
         }
 
         #region View 버튼클릭 메서드

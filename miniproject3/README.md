@@ -61,14 +61,14 @@
 
 [소스](./conveyor_belt/cb0003.ino)
 
-https://github.com/user-attachments/assets/1c96cc09-7e4e-49a1-91c2-0993d3e11ba2
+https://github.com/user-attachments/assets/55dcde90-ed47-42aa-901a-88bc3b5c7e6b
 
 #### 칼라센서 
 - 센싱이 정확하지 않은 문제 내포. 센서가 저렴. 다른 센서와 복합적으로 사용
 
 [소스](./conveyor_belt/cb0004.ino)
 
-https://github.com/user-attachments/assets/ffb760a1-46b2-4a67-8552-d952c76bb2a1
+https://github.com/user-attachments/assets/2d0c22fa-386c-4d27-bf93-5f36bacd49aa
 
 #### MQTT 통신
 - Arduino R4 WIFI에서 통신 가능. RPi나 외부 연결이 불필요
@@ -84,7 +84,8 @@ https://github.com/user-attachments/assets/ffb760a1-46b2-4a67-8552-d952c76bb2a1
 
 [소스](./conveyor_belt/cb0006.ino)
 
-https://github.com/user-attachments/assets/dbb1e7ce-df07-4ccd-99b8-00a82c9d3b1d
+
+https://github.com/user-attachments/assets/78f1c2f0-22f2-4e9b-8c8c-6ec47fe813f2
 
 ### MES 소스수정
 
@@ -120,9 +121,16 @@ https://github.com/user-attachments/assets/dbb1e7ce-df07-4ccd-99b8-00a82c9d3b1d
         });
     }
     ```
-https://github.com/user-attachments/assets/65ee4c39-4e4c-4c3a-90e4-23b033ebee4a
+
+https://github.com/user-attachments/assets/b25e44e1-2a77-4699-82e7-d4c422b9ecde
+
 
 ### 추가 진행
+- 컨베이어벨트 동작시 Timestamp 문제
+    - `1970-01-01 09:00:00` 로 표현되는 현상
+      
+- 컬러센서 센싱 후 부저 동작
+    -  [x] 성공과 실패에 따라 다른 소리 발생
 
 - 모니터링 앱에 비상정지 버튼 추가, 컨베이어 벨트 비상정지 기능 
     - Arduino MQTT Subscribe 추가
